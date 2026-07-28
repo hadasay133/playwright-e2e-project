@@ -22,11 +22,4 @@ The project decouples UI interaction logic from test assertions by assigning eac
 * **Automated Failure Reporting:** Automatically captures screenshots upon test failures and embeds them into the generated HTML reports.
 * **Modular Design:** Strictly separates test scenarios, assertions, and page interaction models for enhanced maintainability.
 
----
-
-## 📌 Assumptions & Limitations
-
-* **Authentication:** Tests run using stubbed authentication or standard guest access.
-* **Currency Standard:** Price extraction and numeric total validations assume **USD ($)**.
-* **Environment:** Designed and calibrated for Staging/QA environments; production execution may require adjusted wait strategies.
-* **Browser Runtime:** Default test execution targets the **Chromium** engine.
+-
