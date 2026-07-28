@@ -20,7 +20,6 @@ def load_test_data():
             item["user_name"],
             item["password"],
             item["query"],
-            item["category"],
             float(item["max_price"]),
             int(item["limit"])
         )
@@ -30,10 +29,10 @@ def load_test_data():
 
 @pytest.mark.asyncio
 @pytest.mark.parametrize(
-    "user_name, password,query, category, max_price, limit",
+    "user_name, password,query, max_price, limit",
     load_test_data()
 )
-async def test_search_items_by_name_under_price(page, base_url, user_name, password,query, category, max_price, limit):
+async def test_search_items_by_name_under_price(page, base_url, user_name, password,query, max_price, limit):
     # 1. Initialize the Page Objects
     login_page = LoginPage(page)
     home_page = HomePage(page)

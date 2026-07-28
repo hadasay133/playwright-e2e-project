@@ -90,7 +90,7 @@ class HomePage(BasePage):
     async def search_items_by_name_under_price(self, query: str, max_price: float, limit: int) -> list[str]:
         # Search for items by name under a specified price
         await self.click_category(query)  # Click the category link
-        await asyncio.sleep(10)  # Wait for the page to load
+        await self.page.wait_for_load_state("load")  # Wait for the page to load
         results = []
 
         while len(results) < limit:
@@ -111,7 +111,7 @@ class HomePage(BasePage):
         # Add specified items to the cart
         for product_name in product_names:
             await self.page.goto("https://www.demoblaze.com/index.html")  # Navigate to the homepage
-            await asyncio.sleep(10)  # Wait for the page to load
+            await self.page.wait_for_load_state("load")  # Wait for the page to load
             product_link = self.page.locator(
                 "a.hrefch",
                 has_text=product_name
@@ -120,7 +120,7 @@ class HomePage(BasePage):
             await product_link.wait_for(state="visible")  # Wait until the product link is visible
             await product_link.scroll_into_view_if_needed()  # Scroll to the product link if needed
             await product_link.click()  # Click the product link
-            await asyncio.sleep(10)  # Wait for the product page to load
+              # Wait for the product page to load
 
             product_page = ProductPage(self.page)  # Create a ProductPage object
             await product_page.add_product_to_cart(product_name)  # Add the product to the cart

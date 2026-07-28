@@ -4,7 +4,6 @@
         "password": "12345678",
         "query": "Phones",
         "max_price": 700,
-        "limit": 3,
-        "category": "Phones"
+        "limit": 3
     }
 ]
