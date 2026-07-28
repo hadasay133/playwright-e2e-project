@@ -11,7 +11,7 @@ The project decouples UI interaction logic from test assertions by assigning eac
 * **`BasePage`** – Base class encapsulating shared page interactions, wait conditions, and common navigation logic.
 * **`LoginPage`** – Manages user authentication flows, modal interactions, and session handling.
 * **`HomePage`** – Handles product search, filtering, and category navigation (*Phones*, *Laptops*, *Monitors*).
-* **`ProductPage`** – Controls product details, cart additions, API response interception, and dynamic browser dialogs (Alerts).
+* **`ProductPage`** – Controls product details, cart additions and dynamic browser dialogs (Alerts).
 * **`CartPage`** – Handles cart item verification, price calculations, item deletion, and checkout completion.
 
 ---
