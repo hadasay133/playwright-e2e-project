@@ -21,5 +21,3 @@ The project decouples UI interaction logic from test assertions by assigning eac
 * **Asynchronous Execution:** Leverages Playwright's `async_api` and `pytest-asyncio` for high performance and non-blocking operations.
 * **Automated Failure Reporting:** Automatically captures screenshots upon test failures and embeds them into the generated HTML reports.
 * **Modular Design:** Strictly separates test scenarios, assertions, and page interaction models for enhanced maintainability.
-
--
